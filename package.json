@@ -1,0 +1,32 @@
+{
+  "name": "foodplanner",
+  "version": "1.0.0",
+  "description": "Smart App to plan weekly food menu",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "devstart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MvKlipphausen/FoodPlanner.git"
+  },
+  "keywords": [
+    "food",
+    "planner"
+  ],
+  "author": "MMue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MvKlipphausen/FoodPlanner/issues"
+  },
+  "homepage": "https://github.com/MvKlipphausen/FoodPlanner#readme"
+}
