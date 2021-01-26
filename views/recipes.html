@@ -38,60 +38,29 @@
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Food Planner</h1>
-        <p class="lead text-muted">Make it smart - make it real - make it yummmmmmi!</p>
+        <h1 class="fw-light">Recipes</h1>
+        <p class="lead text-muted">Overview</p>
         <p>
-          <a href="#" class="btn btn-primary my-2">Plan your meals</a>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#{{modal}}">
+            Add Recipe
+          </button>
           <a href="#" class="btn btn-secondary my-2">Recipes</a>
         </p>
       </div>
     </div>
   </section>
 
-  <div class="album py-5 bg-light">
-    <div class="container">
-
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="../images/food-salad-healthy-vegetables-4_3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Plan Menu</h5>
-              <p class="card-text">Plan the menu for one week</p>
-              <a href="#" class="btn btn-primary">Plan</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="../images/following-the-recipe-4_3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Recipes</h5>
-              <p class="card-text">Collection of all Recipes</p>
-              <a href="#" class="btn btn-primary">Show</a>
-            </div>
-          </div>
-        </div><div class="col">
-          <div class="card shadow-sm">
-            <img src="../images/epic-meal-prep-4-3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">History</h5>
-              <p class="card-text">See past menu plans</p>
-              <a href="#" class="btn btn-primary">Show</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- Modal -->
+  {{>modal.addRecipe}}
 
 </main>
 
-{{> footer}}
+{{> footer }}
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-
+<script src="/javascript/form-validation.js"></script>
       
   </body>
 </html>

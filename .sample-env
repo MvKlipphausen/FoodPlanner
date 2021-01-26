@@ -1,1 +1,2 @@
 PORT=enter_the_port_number
+MONGO_DB_URI=enter_uri_to_mongoDB
