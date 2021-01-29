@@ -4,74 +4,79 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add new Recipe</h5>
+                <h4 class="modal-title" id="exampleModalLabel">New Recipe</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form class="row g-3 needs-validation" novalidate>
-                    <div class="col-md-4">
-                        <label for="validationCustom01" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                <form method="POST" action="/recipes" class="row g-3 needs-validation" novalidate>
+                    <div class="mb-3 row">
+                    <div class="col">
+                        <label for="mealName" class="form-label">Meal Name</label>
+                        <input type="text" class="form-control" id="mealName" name="mealName" placeholder="Ketchup" required>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4" id="menuType">
+                        <label for="menuType" class="form-label">Menu Type</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="breakfastCheck">
+                            <input class="form-check-input" type="checkbox" id="breakfastCheck" name="breakfastCheck" value="breakfast">
                             <label class="form-check-label" for="breakfastCheck">
                                 Breakfast
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="lunchCheck">
+                            <input class="form-check-input" type="checkbox" id="lunchCheck" name="lunchCheck" value="lunch">
                             <label class="form-check-label" for="lunchCheck">
                                 Lunch
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="dinnerCheck">
+                            <input class="form-check-input" type="checkbox" id="dinnerCheck" name="dinnerCheck" value="dinner">
                             <label class="form-check-label" for="dinnerCheck">
                                 Dinner
                             </label>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <label for="validationCustomUsername" class="form-label">Username</label>
-                        <div class="input-group has-validation">
-                            <span class="input-group-text" id="inputGroupPrepend">@</span>
-                            <input type="text" class="form-control" id="validationCustomUsername"
-                                aria-describedby="inputGroupPrepend" required>
-                            <div class="invalid-feedback">
-                                Please choose a username.
-                            </div>
+                        <label for="propertiesToogles" class="form-label">Properties</label>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="vegetarianSwitch" name="vegetarianSwitch">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">vegetarian</label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="sundaySwitch" name="sundaySwitch">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">sunday</label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="quickSwitch" name="quickSwitch">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">&lt;15min</label>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <label for="validationCustom03" class="form-label">City</label>
-                        <input type="text" class="form-control" id="validationCustom03" required>
-                        <div class="invalid-feedback">
-                            Please provide a valid city.
+                    <div class="col-md-4">
+                        <label for="propertiesToogles" class="form-label">Difficulty</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="easy">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              easy
+                            </label>
                         </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked value="medium">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                              medium
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" value="difficult">
+                            <label class="form-check-label" for="flexRadioDefault3">
+                                difficult
+                            </label>
+                          </div>
                     </div>
-                    <div class="col-md-3">
-                        <label for="validationCustom04" class="form-label">State</label>
-                        <select class="form-select" id="validationCustom04" required>
-                            <option selected disabled value="">Choose...</option>
-                            <option>...</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Please select a valid state.
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="validationCustom05" class="form-label">Zip</label>
-                        <input type="text" class="form-control" id="validationCustom05" required>
-                        <div class="invalid-feedback">
-                            Please provide a valid zip.
-                        </div>
-                    </div>
-                    <div class="col-12">
+
+                    <!--div class="col-12">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
                             <label class="form-check-label" for="invalidCheck">
@@ -81,15 +86,15 @@
                                 You must agree before submitting.
                             </div>
                         </div>
-                    </div>
+                    </div-->
                     <div class="col-12">
-                        <button class="btn btn-primary" type="submit">Submit form</button>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" >Add</button>
+                        </div>
                     </div>
+
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Send message</button>
             </div>
         </div>
     </div>

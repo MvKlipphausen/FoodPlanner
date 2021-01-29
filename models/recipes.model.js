@@ -2,14 +2,14 @@ const
     mongoose = require('mongoose');
 
 const RecipeSchema = mongoose.Schema({
-    name: String,
-    menuType: String,
+    mealName: String,
+    menuType: [String],
     isVegetarian: Boolean,
     sundaySuitable: Boolean,
     isQuick: Boolean,
     difficulty: {
         type: String,
-        enum: ['easy, medium, difficult'],
+        enum: ['easy', 'medium', 'difficult'],
         default: 'medium'
     }    
 });
